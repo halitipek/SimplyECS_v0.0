@@ -1,4 +1,3 @@
-#cmake ecs core
 set(ECS_CORE_SOURCES
         src/EntityManager.cpp
         src/SystemManager.cpp
@@ -14,5 +13,9 @@ add_library(ecs_core STATIC ${ECS_CORE_SOURCES})
 
 target_include_directories(ecs_core
         PUBLIC
-        ${CMAKE_CURRENT_SOURCE_DIR}/include
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>
 )
+
+# Set C++ standard
+target_compile_features(ecs_core PUBLIC cxx_std_20)

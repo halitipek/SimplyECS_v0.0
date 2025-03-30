@@ -45,3 +45,20 @@ target_link_libraries(geometry_wars
 
 # Copy resources directory to output folder
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/resources DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+
+# Copy SFML DLLs to output directory on Windows
+if(WIN32)
+    # Add a post-build command that will copy the needed DLLs
+    # This is done using generator expressions instead of trying to find DLLs during configure time
+    add_custom_command(TARGET geometry_wars POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E echo "Copying SFML DLLs to target directory"
+
+            # For each SFML component we use, try to copy the DLL to the target directory
+            # Debug DLLs
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            $<TARGET_FILE:sfml-system>
+            $<TARGET_FILE:sfml-window>
+            $<TARGET_FILE:sfml-graphics>
+            $<TARGET_FILE_DIR:geometry_wars>
+    )
+endif()

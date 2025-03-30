@@ -28,6 +28,11 @@ if(SIMPLYECS_FETCH_DEPENDENCIES)
             set(SFML_BUILD_WINDOW TRUE CACHE BOOL "")
             set(SFML_BUILD_SYSTEM TRUE CACHE BOOL "")
 
+            # On Windows, make sure we prefer shared libraries to easily copy DLLs
+            if(WIN32)
+                set(BUILD_SHARED_LIBS TRUE CACHE BOOL "Build shared libraries")
+            endif()
+
             FetchContent_MakeAvailable(SFML)
         else()
             message(STATUS "Using user-specified SFML_DIR: ${SFML_DIR}")
