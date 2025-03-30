@@ -1,0 +1,75 @@
+{
+  "window": {
+    "width": 1280,
+    "height": 640,
+    "fps": 60,
+    "title": "Geometry Wars"
+  },
+  "player": {
+    "shapeRadius": 32,
+    "collisionRadius": 34,
+    "speed": 200,
+    "fillColor": {"r": 50, "g": 50, "b": 50, "a": 0},
+    "outlineColor": {"r": 191, "g": 188, "b": 0, "a": 215},
+    "outlineThickness": 2,
+    "pointCount": 5,
+    "rot": 45
+  },
+  "enemy": {
+    "shapeRadius": 32,
+    "collisionRadius": 34,
+    "speed": {"min": 90, "max": 200},
+    "fillColor": {"r": 0, "g": 0, "b": 0, "a": 0},
+    "outlineColor": {
+      "3": {"r": 20, "g": 196, "b": 73, "a": 255},
+      "4": {"r": 20, "g": 132, "b": 196, "a": 255},
+      "5": {"r": 182, "g": 19, "b": 194, "a": 255},
+      "6": {"r": 214, "g": 15, "b": 15, "a": 255}
+    },
+    "outlineThickness": 2,
+    "pointCount": {"min": 3, "max": 6},
+    "pointProbabilities": [45, 30, 20, 5],
+    "spawnInterval": 1.4,
+    "maxEnemyCount": 18,
+    "rot": {"min": 15, "max": 60},
+    "advancedEnemy": {
+      "interval": 10,
+      "evadeSpeedMultiplier": 1.8,
+      "evadeThreshold": 185
+    },
+    "spawnDistanceToPlayer": 140,
+    "hitBounce": 40
+  },
+  "particle": {
+    "shapeRadius": 8,
+    "collisionRadius": 9,
+    "speed": 60,
+    "fillColor": {"r": 0, "g": 0, "b": 0, "a": 0},
+    "outlineColor": {"r": 222, "g": 148, "b": 69, "a": 255},
+    "outlineThickness": 1,
+    "pointCount": 3,
+    "lifeSpan": 0.5,
+    "rot": 20
+  },
+  "bullet": {
+    "shapeRadius": 10,
+    "collisionRadius": 12,
+    "speed": 800,
+    "fillColor": {"r": 255, "g": 255, "b": 255, "a": 255},
+    "outlineColor": {"r": 255, "g": 255, "b": 255, "a": 255},
+    "outlineThickness": 2,
+    "pointCount": 20,
+    "spawnInterval": 0.4,
+    "lifeSpan": 1.6
+  },
+  "sonar": {
+    "interval": 1,
+    "timer": 1,
+    "power": 8,
+    "minRadius": 64,
+    "maxRadius": 210,
+    "lifeSpan": 0.7,
+    "segments": 60,
+    "color": {"r": 252, "g": 186, "b": 3, "a": 45}
+  }
+}
