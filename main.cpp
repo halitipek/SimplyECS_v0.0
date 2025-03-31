@@ -1,7 +1,3 @@
-//
-// Created by halit on 14.03.2025.
-//
-
 #include <iostream>
 
 int main()
