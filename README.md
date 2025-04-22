@@ -25,7 +25,7 @@ SimplyECS is a lightweight, high-performance Entity Component System (ECS) writt
 
 ```bash
 # Clone the repository
-git clone https://github.com/halitipek/SimplyECS.git
+git clone https://github.com/halitipek/SimplyECS_v0.0.git
 cd SimplyECS
 
 # Create a build directory
