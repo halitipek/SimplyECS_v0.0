@@ -11,7 +11,7 @@ The easiest way to use SimplyECS is to include it in your CMake project:
 1. Add the repository as a submodule (or copy the code directly):
 
 ```bash
-git submodule add https://github.com/halitipek/SimplyECS.git extern/SimplyECS
+git submodule add https://github.com/halitipek/SimplyECS_v0.0.git extern/SimplyECS
 ```
 
 2. Add the following to your CMakeLists.txt:
